@@ -1,6 +1,7 @@
 export class Evento{
-  nome!:string;
-  data!:string; //possivelmente migrará para tipo data
+  id!: number;
+  titulo!:string;
+  data!: Date; //possivelmente migrará para tipo data
   local!:string;
   tags!:Array<string>;
 }

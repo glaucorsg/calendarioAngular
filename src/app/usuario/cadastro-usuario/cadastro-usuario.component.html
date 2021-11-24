@@ -1,1 +1,23 @@
-<p>cadastro-usuario works!</p>
+<div>
+  <h2>Cadastro de Usuários</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="usuario.nome" placeholder="digite o nome">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>CPF</mat-label>
+    <input matInput [(ngModel)]="usuario.cpf" placeholder="digite o cpf">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Interesses</mat-label>
+    <input matInput [(ngModel)]="usuario.interesses" placeholder="digite seus interesses">
+  </mat-form-field>
+
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <button mat-raised-button mat-icon-button color="primary" (click)="inserirUsuario()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>

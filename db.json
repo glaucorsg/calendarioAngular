@@ -1,0 +1,72 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Aline Barreto",
+      "cpf": 111,
+      "interesses": ["Sistemas distribuídos", "Segurança de dados"]
+    },
+    {
+      "id": 2,
+      "nome": "Cristiano Duarte",
+      "cpf": 222,
+      "interesses": ["Inteligência artificial", "Processamento de imagens", "Redes neurais", "Processamento de linguagem natural", "Processamento de sinais"]
+    }
+  ],
+  "eventos": [
+    {
+      "id": 1,
+      "titulo": "SEMISH 2021 – Seminário Integrado de Software e Hardware",
+      "data": "31/07/2022",
+      "local": "Niterói - RJ",
+      "tags": [
+        "Arquitetura de Computadores e Processamento de Alto Desempenho",
+        "Informática na Educação",
+        "Robótica",
+        "Bancos de Dados e Recuperação de Informação",
+        "Interação Humano-Computador",
+        "Segurança da Informação e de Sistemas Computacionais",
+        "Biologia Computacional",
+        "Inteligência Computacional",
+        "Sistemas de Informação",
+        "Computação Aplicada à Saúde",
+        "Computação Gráfica e Processamento de Imagens",
+        "Jogos e Entretenimento Digital",
+        "Sistemas Multimídia e Web",
+        "Computação Musical",
+        "Linguagens de Programação",
+        "Sistemas Tolerantes a Falhas",
+        "Concepção de Circuitos e Sistemas Integrados",
+        "Métodos Formais",
+        "Engenharia de Sistemas Computacionais",
+        "Processamento de Linguagem Natural"
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "6th International Conference on Medical and Health Informatics (ICMHI 2022)",
+      "data": "13/05/2022",
+      "local": "Kyoto, Japão",
+      "tags": [
+        "Applications in Electronic Health Records",
+        "Biomedical Data mining",
+        "Biomedical Engineering",
+        "Business Intelligence",
+        "Cloud Computing and Big Data for Healthcare",
+        "Collaboration Technologies for Healthcare",
+        "Computational Intelligence Methodologies",
+        "Computer Games for Healthcare",
+        "Health Information System",
+        "Disease Profiling and Personalized Treatment",
+        "E-commerce in Health Informatics",
+        "Epidemiological Modeling",
+        "Health informatics education",
+        "Health Risk Evaluation & Modeling",
+        "Hospital Management",
+        "Information Security Technology",
+        "Intelligent Ward",
+        "Machine Learning"
+      ]
+    }
+  ]
+}
