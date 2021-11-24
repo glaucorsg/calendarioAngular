@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {Evento} from "../shared/model/evento";
-import {Usuario} from "../shared/model/usuario";
+import {Evento} from "./shared/model/evento";
+import {Usuario} from "./shared/model/usuario";
 
 @Component({
   selector: 'app-root',

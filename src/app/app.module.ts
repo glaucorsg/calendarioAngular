@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {FlexModule} from "@angular/flex-layout";
+import {LayoutModule} from "./layout/layout.module";
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {FlexModule} from "@angular/flex-layout";
     MatIconModule,
     MatCardModule,
     FlexModule,
+    LayoutModule,
 
   ],
   providers: [],
