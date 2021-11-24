@@ -10,6 +10,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import {FlexModule} from "@angular/flex-layout";
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    FlexModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
