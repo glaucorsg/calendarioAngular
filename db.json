@@ -4,19 +4,24 @@
       "id": 1,
       "nome": "Aline Barreto",
       "cpf": 111,
-      "interesses": ["Sistemas distribuídos", "Segurança de dados"]
+      "interesses": ["Sistemas distribuídos",
+        "Segurança de dados"]
     },
     {
       "id": 2,
       "nome": "Cristiano Duarte",
       "cpf": 222,
-      "interesses": ["Inteligência artificial", "Processamento de imagens", "Redes neurais", "Processamento de linguagem natural", "Processamento de sinais"]
+      "interesses": ["Inteligência artificial",
+        "Processamento de imagens",
+        "Redes neurais",
+        "Processamento de linguagem natural",
+        "Processamento de sinais"]
     }
   ],
   "eventos": [
     {
       "id": 1,
-      "titulo": "SEMISH 2021 – Seminário Integrado de Software e Hardware",
+      "titulo": "SEMISH 2022 – Seminário Integrado de Software e Hardware",
       "data": "31/07/2022",
       "local": "Niterói - RJ",
       "tags": [

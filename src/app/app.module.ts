@@ -12,6 +12,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {FlexModule} from "@angular/flex-layout";
 import {LayoutModule} from "./layout/layout.module";
+import {EventoService} from "./shared/services/evento.service";
+import {UsuarioModule} from "./usuario/usuario.module";
+import {HttpClientModule} from "@angular/common/http";
+import {EventoModule} from "./evento/evento.module";
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -21,15 +26,19 @@ import {LayoutModule} from "./layout/layout.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    FlexModule,
     LayoutModule,
+    FlexModule,
+    EventoModule,
+    UsuarioModule,
+    RouterModule,
+    HttpClientModule
 
   ],
   providers: [],
