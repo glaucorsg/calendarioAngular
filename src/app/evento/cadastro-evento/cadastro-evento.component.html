@@ -1,27 +1,34 @@
-<div>
-  <h2>Cadastro de Eventos</h2>
-  <mat-form-field appearance="fill">
-    <mat-label>Título</mat-label>
-    <input matInput [(ngModel)]="evento.titulo" placeholder="digite o título do evento">
-  </mat-form-field>
+<div fxLayout="row" fxLayoutAlign="left center">
+  <mat-card fxFlex="100%">
+    <mat-card-header>
+      <mat-card-title *ngIf="operacaoCadastro">Cadastro de evento</mat-card-title>
+      <mat-card-title *ngIf="!operacaoCadastro">Edição de evento</mat-card-title>
+    </mat-card-header>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Data</mat-label>
-    <input matInput [(ngModel)]="evento.data" placeholder="digite a data do evento">
-  </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Título</mat-label>
+      <input matInput [(ngModel)]="evento.titulo" placeholder="digite o título do evento">
+    </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Local</mat-label>
-    <input matInput [(ngModel)]="evento.local" placeholder="digite o local do evento">
-  </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Data</mat-label>
+      <input matInput [(ngModel)]="evento.data" placeholder="digite a data do evento">
+    </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Tags</mat-label>
-    <input matInput [(ngModel)]="evento.tags" placeholder="digite os principais temas do evento">
-  </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Local</mat-label>
+      <input matInput [(ngModel)]="evento.local" placeholder="digite o local do evento">
+    </mat-form-field>
 
-  <div fxLayout="row" fxLayoutAlign="center center">
-    <button mat-raised-button mat-icon-button color="primary" (click)="inserirEvento()">
+    <mat-form-field appearance="fill">
+      <mat-label>Tags</mat-label>
+      <input matInput [(ngModel)]="evento.tags" placeholder="digite os principais temas do evento">
+    </mat-form-field>
+
+    <button mat-raised-button mat-icon-button (click)="inserirEvento()">
       <mat-icon>add</mat-icon>
     </button>
-  </div>
+  </mat-card>
+</div>
+
+

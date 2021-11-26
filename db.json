@@ -20,30 +20,6 @@
         "Processamento de linguagem natural",
         "Processamento de sinais"
       ]
-    },
-    {
-      "nome": "Teste",
-      "cpf": "123",
-      "interesses": "qweqwe, qweqweq, eqewqeqw",
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "nome": "João",
-      "cpf": "123123",
-      "interesses": "sdafasdf, asdfasdf, asdfsadf ",
-      "id": 6
-    },
-    {
-      "nome": "José",
-      "cpf": "987987",
-      "interesses": "ipoipoi, ouiouoiu, safsadf",
-      "id": 7
     }
   ],
   "eventos": [
@@ -100,30 +76,6 @@
         "Intelligent Ward",
         "Machine Learning"
       ]
-    },
-    {
-      "titulo": "teste",
-      "data": "15/10/2022",
-      "local": "Natal",
-      "tags": "e1, e2, e3",
-      "id": 3
-    },
-    {
-      "titulo": "teste",
-      "data": "15/10/2022",
-      "local": "Natal",
-      "tags": "e1, e2, e3",
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "titulo": "sadfasdf",
-      "data": "25/04/2022",
-      "local": "João Pessoa",
-      "tags": "wqerwqer, werwqerq, rweqrwqer",
-      "id": 6
     }
   ]
 }
