@@ -16,6 +16,11 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     CadastroEventoComponent,
     ListagemEventoComponent
   ],
+
+  exports: [
+    ListagemEventoComponent,
+    CadastroEventoComponent
+  ],
   imports: [
     CommonModule,
     MatInputModule,

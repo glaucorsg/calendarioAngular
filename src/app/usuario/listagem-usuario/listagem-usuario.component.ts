@@ -21,7 +21,7 @@ export class ListagemUsuarioComponent implements OnInit {
   }
 
   editar(usuario: Usuario): void{
-    this.roteador.navigate(['cadastrarUsuario', usuario.id]);
+    this.roteador.navigate(['cadastrarusuario', usuario.id]);
   }
 
   remover(usuario: Usuario): void{

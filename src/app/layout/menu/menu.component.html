@@ -2,13 +2,13 @@
   <button mat-button [matMenuTriggerFor]="usuariosMenu" class="botaoMenu">Usuários</button>
   <mat-menu #usuariosMenu="matMenu" yPosition="below">
     <button mat-menu-item [routerLink]="['/cadastrarusuario']">Cadastrar usuário</button>
-    <button mat-menu-item [routerLink]="['/listarusuario']">Listagem de usuários</button>
+    <button mat-menu-item [routerLink]="['/listarusuarios']">Listagem de usuários</button>
   </mat-menu>
 
   <button mat-button [matMenuTriggerFor]="eventosMenu" class="botaoMenu">Eventos</button>
   <mat-menu #eventosMenu="matMenu" yPosition="below">
     <button mat-menu-item [routerLink]="['/cadastrarevento']">Cadastrar evento</button>
-    <button mat-menu-item [routerLink]="['/listarevento']">Listagem de eventos</button>
+    <button mat-menu-item [routerLink]="['/listareventos']">Listagem de eventos</button>
   </mat-menu>
 </div>
 

@@ -4,6 +4,7 @@ import {Observable, of} from "rxjs";
 import {Usuario} from "../model/usuario";
 import {catchError} from "rxjs/operators";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,13 +18,9 @@ export class UsuarioService {
   }
 
   listarUsuarios(): Observable<Usuario[]>{
-    // @ts-ignore
-    return this.httpClient.get<Usuario[]>(this.URL_USUARIOS).pipe(catchError(erro => {
-      console.log('Erro de carregamento', erro);
-      return of(undefined);
-    }
-    ));
+    return this.httpClient.get<Usuario[]>(this.URL_USUARIOS);
   }
+
 
   inserirUsuario(usuario: Usuario): Observable<Usuario>{
     return this.httpClient.post<Usuario>(this.URL_USUARIOS, usuario);

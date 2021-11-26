@@ -12,7 +12,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {FlexModule} from "@angular/flex-layout";
 import {LayoutModule} from "./layout/layout.module";
-import {EventoService} from "./shared/services/evento.service";
 import {UsuarioModule} from "./usuario/usuario.module";
 import {HttpClientModule} from "@angular/common/http";
 import {EventoModule} from "./evento/evento.module";

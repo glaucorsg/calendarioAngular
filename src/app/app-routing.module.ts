@@ -15,7 +15,7 @@ const routes: Routes = [
     component:CadastroEventoComponent
   },
   {
-    path: 'listarevento',
+    path: 'listareventos',
     component: ListagemEventoComponent
   },
   {
@@ -27,7 +27,7 @@ const routes: Routes = [
     component: CadastroUsuarioComponent
   },
   {
-    path:'listarusuario',
+    path:'listarusuarios',
     component: ListagemUsuarioComponent
   }
 ];

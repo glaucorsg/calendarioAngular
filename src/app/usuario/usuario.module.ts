@@ -18,6 +18,12 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     CadastroUsuarioComponent,
     ListagemUsuarioComponent
   ],
+
+  exports: [
+    ListagemUsuarioComponent,
+    CadastroUsuarioComponent
+  ],
+
   imports: [
     CommonModule,
     MatInputModule,

@@ -23,7 +23,7 @@ export class ListagemEventoComponent implements OnInit {
   }
 
   editar(evento: Evento): void {
-    this.roteador.navigate(['cadastrarEvento', evento.id]);
+    this.roteador.navigate(['cadastrarevento', evento.id]);
   }
 
   remover(evento: Evento): void {
