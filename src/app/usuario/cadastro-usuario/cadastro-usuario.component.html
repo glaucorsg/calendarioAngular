@@ -1,0 +1,29 @@
+<div fxLayout="row" fxLayoutAlign="left center">
+  <mat-card fxFlex="100%">
+    <mat-card-header>
+      <mat-card-title *ngIf="operacaoCadastro">Cadastro de usuário</mat-card-title>
+      <mat-card-title *ngIf="!operacaoCadastro">Edição de usuário</mat-card-title>
+    </mat-card-header>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="usuario.nome" placeholder="digite o nome">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>CPF</mat-label>
+      <input matInput [(ngModel)]="usuario.cpf" placeholder="digite o cpf">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Interesses</mat-label>
+      <input matInput [(ngModel)]="usuario.interesses" placeholder="digite seus interesses">
+    </mat-form-field>
+
+      <button mat-raised-button mat-icon-button (click)="inserirUsuario()">
+        <mat-icon>add</mat-icon>
+      </button>
+  </mat-card>
+</div>
+
+<app-listagem-usuario></app-listagem-usuario>

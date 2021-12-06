@@ -1,0 +1,38 @@
+
+<mat-table [dataSource]="dataSource">
+  <mat-header-row *matHeaderRowDef="mostrarColunas"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: mostrarColunas;"></mat-row>
+
+  <ng-container matColumnDef="titulo">
+    <mat-header-cell *matHeaderCellDef>Título</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.titulo | letraMaiuscula}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="data">
+    <mat-header-cell *matHeaderCellDef>Data</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.data | data}}</mat-cell> //fazer um pipe para data
+  </ng-container>
+
+  <ng-container matColumnDef="local">
+    <mat-header-cell *matHeaderCellDef>Local</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.local | letraMaiuscula}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="tags">
+    <mat-header-cell *matHeaderCellDef>Áreas de interesse</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.tags}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
+    <mat-cell *matCellDef="let item">
+      <button mat-icon-button>
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon (click)="apagar(item.id)">delete</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+
+</mat-table>
