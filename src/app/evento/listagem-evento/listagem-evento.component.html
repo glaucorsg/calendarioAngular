@@ -1,8 +1,9 @@
 <div fxLayout="row" fxLayout.lt-md="column">
   <mat-card *ngFor="let evento of eventos" class="card-evento" fxFlex="30%">
     <mat-card-header>
-      <mat-card-title><mat-icon>event</mat-icon>{{evento.titulo}}</mat-card-title>
-      <mat-card-subtitle>{{evento.data}}<br>{{evento.local}}</mat-card-subtitle>
+      <mat-card-title *ngIf="evento.titulo"><mat-icon>event</mat-icon>{{evento.titulo | letraMaiuscula}}</mat-card-title>
+      <mat-card-subtitle *ngIf="evento.data">{{evento.data | data}}</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="evento.local">{{evento.local | letraMaiuscula}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>{{evento.tags}}</mat-card-content>
     <mat-card-actions>
