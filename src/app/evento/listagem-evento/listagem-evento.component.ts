@@ -12,7 +12,7 @@ export class ListagemEventoComponent implements OnInit {
 
   eventos!: Array<Evento>;
 
-  constructor(private eventoservice: EventoFirestoreService, private roteador: Router) {
+  constructor(private eventoservice: EventoService, private roteador: Router) {
   }
 
 

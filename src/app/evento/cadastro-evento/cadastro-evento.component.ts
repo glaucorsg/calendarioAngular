@@ -15,7 +15,7 @@ export class CadastroEventoComponent implements OnInit {
 
   operacaoCadastro = true;
 
-  constructor(private eventoservice: EventoFirestoreService, private rotaAtual: ActivatedRoute, private roteador: Router) {
+  constructor(private eventoservice: EventoService, private rotaAtual: ActivatedRoute, private roteador: Router) {
     this.evento = new Evento();
     if (this.rotaAtual.snapshot.paramMap.has('id')){
       this.operacaoCadastro = false;

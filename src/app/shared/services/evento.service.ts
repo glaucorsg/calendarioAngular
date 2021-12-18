@@ -10,7 +10,7 @@ import {catchError} from "rxjs/operators";
 })
 export class EventoService {
 
-  URL_EVENTOS = 'http://localhost:3000/eventos';
+  URL_EVENTOS = 'http://localhost:8080/eventos';
 
   constructor(private httpClient: HttpClient) {
   }

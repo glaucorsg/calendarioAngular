@@ -14,7 +14,7 @@ export class ListagemEventoTabelaComponent implements OnInit {
   dataSource!: MatTableDataSource<Evento>;
   mostrarColunas = ['titulo', 'data', 'local', 'tags', 'acoes'];
 
-  constructor(private eventoservice: EventoFirestoreService) {
+  constructor(private eventoservice: EventoService) {
 
   }
 

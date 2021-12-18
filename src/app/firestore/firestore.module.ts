@@ -6,9 +6,6 @@ import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import {AngularFireModule} from "@angular/fire/compat";
 import {FirebaseConfig} from "../../../firebase.config";
 
-
-
-
 @NgModule({
   declarations: [],
   imports: [

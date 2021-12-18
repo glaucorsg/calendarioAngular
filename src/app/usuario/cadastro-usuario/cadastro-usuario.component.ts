@@ -17,11 +17,11 @@ export class CadastroUsuarioComponent implements OnInit {
 
   operacaoCadastro = true;
 
-  constructor(private usuarioservice: UsuarioFirestoreService, private rotaAtual: ActivatedRoute, private roteador: Router) {
+  constructor(private usuarioservice: UsuarioService, private rotaAtual: ActivatedRoute, private roteador: Router) {
     this.usuario = new Usuario();
     if (this.rotaAtual.snapshot.paramMap.has('id')){
       this.operacaoCadastro = false;
-      const idParaEdicao = String(this.rotaAtual.snapshot.paramMap.get('id'));
+      const idParaEdicao = Number(this.rotaAtual.snapshot.paramMap.get('id'));
       this.usuarioservice.pesquisarPorId(idParaEdicao).subscribe(
         usuarioRetornado => this.usuario = usuarioRetornado
       );
@@ -33,14 +33,14 @@ export class CadastroUsuarioComponent implements OnInit {
 
   inserirUsuario(): void {
     if (this.usuario.id){
-      this.usuarioservice.atualizar(this.usuario).subscribe(
+      this.usuarioservice.atualizarUsuario(this.usuario).subscribe(
         usuarioAlterado => {
           console.log(usuarioAlterado);
           this.roteador.navigate(['listarusuarios']);
         }
       );
     } else {
-      this.usuarioservice.inserir(this.usuario).subscribe(
+      this.usuarioservice.inserirUsuario(this.usuario).subscribe(
         usuarioInserido => {
           console.log(usuarioInserido);
           this.roteador.navigate(['listarusuarios']);
