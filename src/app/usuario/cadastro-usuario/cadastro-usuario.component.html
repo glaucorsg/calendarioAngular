@@ -21,7 +21,8 @@
     </mat-form-field>
 
       <button mat-raised-button mat-icon-button (click)="inserirUsuario()">
-        <mat-icon>add</mat-icon>
+        <mat-icon *ngIf="operacaoCadastro">add</mat-icon>
+        <mat-icon *ngIf="!operacaoCadastro">edit</mat-icon>
       </button>
   </mat-card>
 </div>

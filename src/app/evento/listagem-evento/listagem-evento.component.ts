@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {Evento} from "../../shared/model/evento";
 import {EventoFirestoreService} from "../../shared/services/evento-firestore.service";
+import {EventoService} from "../../shared/services/evento.service";
 
 @Component({
   selector: 'app-listagem-evento',
@@ -17,7 +18,7 @@ export class ListagemEventoComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.eventoservice.listar().subscribe(
+    this.eventoservice.listarEventos().subscribe(
       eventos => this.eventos = eventos
     );
   }
@@ -27,7 +28,7 @@ export class ListagemEventoComponent implements OnInit {
   }
 
   remover(evento: Evento): void {
-    this.eventoservice.remover(String(evento.id)).subscribe(
+    this.eventoservice.removerEvento(Number(evento.id)).subscribe(
       resposta => {
         const indxEventoARemover = this.eventos.findIndex(e => e.titulo == evento.titulo);
         if (indxEventoARemover > -1) {

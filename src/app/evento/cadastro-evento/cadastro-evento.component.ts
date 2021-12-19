@@ -19,7 +19,7 @@ export class CadastroEventoComponent implements OnInit {
     this.evento = new Evento();
     if (this.rotaAtual.snapshot.paramMap.has('id')){
       this.operacaoCadastro = false;
-      const idParaEdicao = String(this.rotaAtual.snapshot.paramMap.get('id'));
+      const idParaEdicao = Number(this.rotaAtual.snapshot.paramMap.get('id'));
       this.eventoservice.pesquisarPorId(idParaEdicao).subscribe(
         eventoRetornado => this.evento = eventoRetornado
       );
@@ -31,14 +31,14 @@ export class CadastroEventoComponent implements OnInit {
 
   inserirEvento(): void{
     if (this.evento.id){
-      this.eventoservice.atualizar(this.evento).subscribe(
+      this.eventoservice.atualizarEvento(this.evento).subscribe(
         eventoAlterado => {
           console.log(eventoAlterado);
           this.roteador.navigate(['listareventos']);
         }
       );
     } else {
-      this.eventoservice.inserir(this.evento).subscribe(
+      this.eventoservice.inserirEvento(this.evento).subscribe(
         eventoInserido => {
           console.log(eventoInserido);
           this.roteador.navigate(['listareventos']);

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {Evento} from "../../shared/model/evento";
 import {EventoFirestoreService} from "../../shared/services/evento-firestore.service";
+import {EventoService} from "../../shared/services/evento.service";
 
 @Component({
   selector: 'app-listagem-evento-tabela',
@@ -19,13 +20,13 @@ export class ListagemEventoTabelaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.eventoservice.listar().subscribe(
+    this.eventoservice.listarEventos().subscribe(
       eventos => this.dataSource = new MatTableDataSource(eventos)
     );
   }
 
     apagar(id: string): void {
-      this.eventoservice.remover(id).subscribe(
+      this.eventoservice.removerEvento(Number(id)).subscribe(
         apagado => {
           const indx = this.dataSource.data.findIndex(evento => evento.id === id);
           if (indx > -1) {
