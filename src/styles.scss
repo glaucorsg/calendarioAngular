@@ -2,3 +2,19 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+snack-bar-container.success{
+  background-color: darkgreen;
+}
+
+snack-bar-container.error{
+  background-color: lightcoral;
+}
+
+snack-bar-container.warning{
+  background-color: orange;
+}
+
+snack-bar-container.info{
+  background-color: lightskyblue;
+}

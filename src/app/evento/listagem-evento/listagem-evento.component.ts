@@ -3,6 +3,7 @@ import {Router} from "@angular/router";
 import {Evento} from "../../shared/model/evento";
 import {EventoFirestoreService} from "../../shared/services/evento-firestore.service";
 import {EventoService} from "../../shared/services/evento.service";
+import {MensagemService} from "../../shared/services/mensagem.service";
 
 @Component({
   selector: 'app-listagem-evento',
@@ -13,9 +14,9 @@ export class ListagemEventoComponent implements OnInit {
 
   eventos!: Array<Evento>;
 
-  constructor(private eventoservice: EventoService, private roteador: Router) {
+  constructor(private eventoservice: EventoService, private roteador: Router,
+              private mensagemService: MensagemService) {
   }
-
 
   ngOnInit(): void {
     this.eventoservice.listarEventos().subscribe(
@@ -33,6 +34,7 @@ export class ListagemEventoComponent implements OnInit {
         const indxEventoARemover = this.eventos.findIndex(e => e.titulo == evento.titulo);
         if (indxEventoARemover > -1) {
           this.eventos.splice(indxEventoARemover, 1);
+          this.mensagemService.info(`Evento ${evento.titulo} excluído`);
         }
       }
     );

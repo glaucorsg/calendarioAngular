@@ -18,6 +18,7 @@ import {EventoModule} from "./evento/evento.module";
 import {RouterModule} from "@angular/router";
 import {FirestoreModule} from "./firestore/firestore.module";
 import {PipesModule} from "./shared/pipes/pipes.module";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import {PipesModule} from "./shared/pipes/pipes.module";
     RouterModule,
     HttpClientModule,
     FirestoreModule,
-    PipesModule
+    PipesModule,
+    MatSnackBarModule
 
   ],
   providers: [],

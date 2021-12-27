@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {UsuarioService} from "../../shared/services/usuario.service";
 import {Evento} from "../../shared/model/evento";
 import {UsuarioFirestoreService} from "../../shared/services/usuario-firestore.service";
+import {MensagemService} from "../../shared/services/mensagem.service";
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -17,7 +18,8 @@ export class CadastroUsuarioComponent implements OnInit {
 
   operacaoCadastro = true;
 
-  constructor(private usuarioService: UsuarioService, private rotaAtual: ActivatedRoute, private roteador: Router) {
+  constructor(private usuarioService: UsuarioService, private rotaAtual: ActivatedRoute,
+              private roteador: Router, private mensagemService: MensagemService) {
     this.usuario = new Usuario();
     if (this.rotaAtual.snapshot.paramMap.has('id')){
       this.operacaoCadastro = false;
@@ -37,6 +39,7 @@ export class CadastroUsuarioComponent implements OnInit {
         usuarioAlterado => {
           console.log(usuarioAlterado);
           this.roteador.navigate(['listarusuarios']);
+          this.mensagemService.warning(`Usuário ${this.usuario.nome} editado`);
         }
       );
     } else {
@@ -44,6 +47,7 @@ export class CadastroUsuarioComponent implements OnInit {
         usuarioInserido => {
           console.log(usuarioInserido);
           this.roteador.navigate(['listarusuarios']);
+          this.mensagemService.success(`Usuário ${usuarioInserido.nome} inserido com sucesso`);
         }
       )
     }
