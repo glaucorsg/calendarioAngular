@@ -19,6 +19,7 @@ import {RouterModule} from "@angular/router";
 import {FirestoreModule} from "./firestore/firestore.module";
 import {PipesModule} from "./shared/pipes/pipes.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {InterceptorModule} from "./interceptor/interceptor.module";
 
 
 @NgModule({
@@ -43,7 +44,9 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     HttpClientModule,
     FirestoreModule,
     PipesModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    InterceptorModule
+
 
   ],
   providers: [],

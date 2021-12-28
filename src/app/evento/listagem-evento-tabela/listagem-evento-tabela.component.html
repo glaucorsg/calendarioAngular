@@ -5,7 +5,7 @@
 
   <ng-container matColumnDef="titulo">
     <mat-header-cell *matHeaderCellDef>Título</mat-header-cell>
-    <mat-cell *matCellDef="let item">{{item.titulo | letraMaiuscula}}</mat-cell>
+    <mat-cell *matCellDef="let item">{{item.titulo | titlecase}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="data">
@@ -15,7 +15,7 @@
 
   <ng-container matColumnDef="local">
     <mat-header-cell *matHeaderCellDef>Local</mat-header-cell>
-    <mat-cell *matCellDef="let item">{{item.local | letraMaiuscula}}</mat-cell>
+    <mat-cell *matCellDef="let item">{{item.local}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="tags">

@@ -3,7 +3,7 @@
       <mat-card-header>
         <mat-card-title *ngIf="usuario.nome">
           <mat-icon>person</mat-icon>
-          {{usuario.nome | letraMaiuscula}}
+          {{usuario.nome | titlecase}}
         </mat-card-title>
         <mat-card-subtitle *ngIf="usuario.cpf">CPF: {{usuario.cpf | cpf}}</mat-card-subtitle>
       </mat-card-header>
